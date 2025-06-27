@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Battleship with Vanilla</title>
 
     <!-- Fontawesome is our recomended library for icons -->
     <link
@@ -13,21 +13,173 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="header">
+      <div>
+        <h3 class="nombre">Battleship Game 🚢💥</h3>
       </div>
+     <div>
+        <p id="mensaje"></p>
+     </div>
     </div>
+    <div class="container">
+      <div class="columna">
+        <div class="cuadro-blanco"></div>
+        <div class="cuadro-coordenada-x" >a</div>
+        <div class="cuadro-coordenada-x">b</div>
+        <div class="cuadro-coordenada-x">c</div>
+        <div class="cuadro-coordenada-x">d</div>
+        <div class="cuadro-coordenada-x">e</div>
+        <div class="cuadro-coordenada-x">f</div>
+        <div class="cuadro-coordenada-x">g</div>
+        <div class="cuadro-coordenada-x">h</div>
+        <div class="cuadro-coordenada-x">i</div>
+        <div class="cuadro-coordenada-x">j</div>
+      </div>
+      <div class="columna">
+        <div  class="cuadro-coordenada-y">1</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div  class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div  class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+      <div class="columna">
+        <div class="cuadro-coordenada-y">2</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+      <div class="columna">
+        <div class="cuadro-coordenada-y">3</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+       <div class="columna">
+        <div class="cuadro-coordenada-y">4</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+       <div class="columna">
+        <div class="cuadro-coordenada-y">5</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+       <div class="columna">
+        <div class="cuadro-coordenada-y">6</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+       <div class="columna">
+        <div class="cuadro-coordenada-y">7</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+       <div class="columna">
+        <div class="cuadro-coordenada-y">8</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+      <div class="columna">
+        <div class="cuadro-coordenada-y">9</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+      <div class="columna">
+        <div class="cuadro-coordenada-y">10</div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro"></div>
+        <div class="cuadro-gris-claro" ></div>
+        <div class="cuadro-gris-claro" ></div>
+      </div>
+
+    </div>
+      <div class="apartado-botones">
+        <button id="fire" class="boton">Fire</button>
+        <button id="show-ships" class="boton">Show Ships</button>
+      </div>
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>

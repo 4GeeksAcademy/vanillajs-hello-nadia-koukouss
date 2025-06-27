@@ -1,5 +1,76 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background: white;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nombre{
+    margin: 0;
+}
+#mensaje{
+    color: rgba(255, 3, 53, 1);
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    margin: 5px auto;
+    gap: 1px;
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    gap: 1px;
+    text-align: center;
+}
+.columna .cuadro-blanco{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+.columna .cuadro-coordenada-y{
+    background-color: grey;
+    width: 60px;
+    height: 30px;
+}
+.columna .cuadro-coordenada-x{
+    background-color:grey;
+    width: 30px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna .cuadro-gris-claro{
+    background-color: rgba(186, 183, 184, 0.16);
+    width: 60px;
+    height: 60px;
+}
+
+.apartado-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.apartado-botones .boton{
+    padding: 1px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(174, 171, 173, 0.8);
+}
+.boton:hover{
+    background-color: rgba(194, 193, 193, 0.8);
 }
